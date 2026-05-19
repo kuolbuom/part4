@@ -1,0 +1,14 @@
+{
+  "name": "step1",
+  "version": "1.0.0",
+  "description": "Helper Functions and Unit Tests, step 1",
+  "license": "ISC",
+  "author": "Kuol Buom Patai",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+     "dev": "node --watch index.js",
+    "test": "node --test"
+  }
+}

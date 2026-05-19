@@ -1,9 +1,9 @@
-PUT  http://localhost:3003/api/blogs/6a0ad29c5bb3770d8c5e2da9
+PUT    http://localhost:3003/api/blogs/6a0c28198948c4ec9adca590
 Content-Type: application/json
 
 {
- "title": "HTML is easy!",
- "author": "HTML",
-  "url": "HTMLs.com",
-  "likes": 20
+ "title": "test by me!",
+ "author": "you",
+  "url": "you.com",
+  "likes": 1000
 }

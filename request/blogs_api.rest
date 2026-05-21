@@ -1,8 +1,10 @@
-POST     http://localhost:3003/api/blogs
+POST   http://localhost:3003/api/blogs
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImhlbGFzIiwiaWQiOiI2YTBlYjAyNzcxYWQ5N2Y1MzJkNzQzODgiLCJpYXQiOjE3NzkzNTU2NzR9.QIhAMLnz9u0WD-yA4VomY0M5smiZErXnn33EMIv6XEg
 
 {
-     "title": "CSS is hard",
-    "author": "CSS",
-    "url": "CSS.com"
+ "title": "my second blog",
+ "author": "arto helas",
+  "url": "artohelas.com",
+  "likes":3
 }

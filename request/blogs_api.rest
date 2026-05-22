@@ -1,9 +1,10 @@
 POST   http://localhost:3003/api/blogs
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imt1b2xidW9tIiwiaWQiOiI2YTBlYzAwM2QzYTRkNGFjMDU5MGZlZDUiLCJpYXQiOjE3NzkzNjczNzF9.m1Dndf9gQ80RX8iiz7eaY9F5XlM4qQLN8c1GJcacQZ0
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imt1b2xidW9tIiwiaWQiOiI2YTBlYzAwM2QzYTRkNGFjMDU5MGZlZDUiLCJpYXQiOjE3Nzk0MzA2NzF9.KGw3gLIwsbX3yuEQZJSUU06ESCfuqmk6PJTcTtKzmIY
 
 {
- "title": "that's buom",
- "author": "kuol",
- "url":"yes.com"
+ "title": "new day",
+ "author": "Mr. kuol",
+ "url":"mrkuol.com",
+ "likes":200
 }

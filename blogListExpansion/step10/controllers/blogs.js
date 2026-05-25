@@ -4,7 +4,6 @@ const Blog = require('../models/blog')
 const User = require('../models/user')
 const logger = require('../utils/logger')
 const config = require('../utils/config')
-const middleware = require('../utils/middleware')
 
 
 blogsRouter.get('/', async (request, response) => {
@@ -28,15 +27,25 @@ blogsRouter.get('/:id', async (request, response) => {
   }
 })
 
-blogsRouter.post(
-  '/',
-  middleware.userExtractor, 
-  async (request, response) => {
-
+blogsRouter.post('/', async (request, response) => {
   const body = request.body
 
-  const user = request.user
+const decodedToken = jwt.verify(
+  request.token,
+  config.SECRET,
+   // token expires in 60*60 seconds, that is, in one hour
+  { expiresIn: 60*60 }
+)
 
+if (!decodedToken.id) {
+    return response.status(401).json({ error: 'token invalid' })
+  }
+
+  const user = await User.findById(decodedToken.id)
+
+ if (!user) {
+    return response.status(400).json({ error: 'UserId missing or not valid' })
+  }
 
   const blog = new Blog({
     title: body.title,
@@ -56,12 +65,19 @@ blogsRouter.post(
 })
 
 //protect delete route with token
-blogsRouter.delete(
-  '/:id',
-  middleware.userExtractor,
-  async (request, response) => {
+blogsRouter.delete('/:id', async (request, response) => {
+  //verify token
+  const decodedToken = jwt.verify(
+  request.token,
+  config.SECRET
+)
 
-  const user = request.user
+//token missing or invalid
+if (!decodedToken.id) {
+  return response.status(401).json({
+    error: 'token invalid'
+  })
+}
 
 //find blog
 const blog = await Blog.findById(request.params.id)

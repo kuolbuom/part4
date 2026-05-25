@@ -1,10 +1,2 @@
-POST   http://localhost:3003/api/blogs
-Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imt1b2xidW9tIiwiaWQiOiI2YTBlYzAwM2QzYTRkNGFjMDU5MGZlZDUiLCJpYXQiOjE3Nzk0MzA2NzF9.KGw3gLIwsbX3yuEQZJSUU06ESCfuqmk6PJTcTtKzmIY
-
-{
- "title": "new day",
- "author": "Mr. kuol",
- "url":"mrkuol.com",
- "likes":200
-}
+DELETE  http://localhost:3003/api/blogs/6a0ebe6dd3a4d4ac0590fed3
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImhlbGFzIiwiaWQiOiI2YTBlYjAyNzcxYWQ5N2Y1MzJkNzQzODgiLCJpYXQiOjE3Nzk0MzM4ODd9.DkDbCBB1q-XhG0xA6ZgZ7wN2ZXzYmo_NZ6gpxyCmHTE

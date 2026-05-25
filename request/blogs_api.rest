@@ -1,1 +1,11 @@
-GET   http://localhost:3003/api/blogs
+POST http://localhost:3003/api/blogs
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvb3QiLCJpZCI6IjZhMTNmZmVmMmNmZjg1ZWEzODMyMmQ3NiIsImlhdCI6MTc3OTY5NzM3MX0.4W3nJkDjVdJWwpwkZ3fS3Bo8HygWR-zgl5nbUPidhLA
+
+
+{
+  "title": "post by root",
+  "author": "root",
+  "url":"root.com",
+  "likes": 7
+}

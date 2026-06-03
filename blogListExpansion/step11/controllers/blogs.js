@@ -64,9 +64,15 @@ blogsRouter.delete(
 
     //find blog
     const blog = await Blog.findById(request.params.id)
+     //checking whether there is no blog
+        if (!blog) {
+      return response.status(404).json({
+        error: 'blog not found'
+      })
+    }
 
     //compare blog owner with token user or compare creator id with token id
-    if (blog.user.toString() !== decodedToken.id.toString()) {
+    if (blog.user.toString() !== user.id.toString()) {
       return response.status(401).json({
         error: 'only creator can delete a blog'
       })
